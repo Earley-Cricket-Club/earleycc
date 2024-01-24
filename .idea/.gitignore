@@ -7,3 +7,6 @@
 *.idea/*
 .idea/
 .idea/**
+/earleycc.iml
+/modules.xml
+/vcs.xml
