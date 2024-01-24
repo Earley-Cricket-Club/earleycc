@@ -26,33 +26,42 @@
             }
         </script>
         <title>Earley Cricket Club</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+              integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+              crossorigin=""/>
         <style>
             html, body, .container {
-                height: 100%;
+                -webkit-font-smoothing: antialiased;
+                background: #fefefe;
+                color: #666;
+                font-family: Avenir,Helvetica,Arial,sans-serif;
+                font-weight: 400;
             }
+            #map { height: 300px; }
 
-            .container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-            }
-            h1, p {
-                margin: 0.4rem
-            }
-            .text-center {
-                text-align:center;
-            }
         </style>
     </head>
     <body>
-        <div class="container">
-            <img src="images/earley-cricket-club.png" alt="Earley Cricket Club">
-            <p class="text-center">
-            We are Earley Cricket Club in Reading started in 2007. The club is run by passionate volunteers, we have 50+ members from different age groups, ethnicity, and backgrounds. 
-            Our cricket club is not just a sports facility; it's a haven for camaraderie, a breeding ground for talent - some of the kids who started their journey here are playing county level cricket now, 
-            and a place where memories are made. We currently run the following teams:<br>
-            <p class="text-center">
+        <div class="px-4 py-2 my-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/images/earley-cricket-club.png" alt="Earley Cricket Club">
+            <h1 class="display-5 fw-bold">Earley Cricket Club</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">
+                    We are Earley Cricket Club in Reading started in 2007. The club is run by passionate volunteers, we have 50+ members from different age groups, ethnicity, and backgrounds.
+                    Our cricket club is not just a sports facility; it's a haven for camaraderie, a breeding ground for talent - some of the kids who started their journey here are playing county level cricket now,
+                    and a place where memories are made.
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="https://earley.play-cricket.com/" class="btn btn-success btn-lg px-4 gap-3">Earley CC on Play-Cricket</a>
+                    <a href="https://www.crowdfunder.co.uk/p/earley-cricket-club-pavilion" class="btn btn-primary btn-lg px-4">Support Our Fundraiser</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-4 py-2 my-2">
+            <h2 class="display-5 fw-bold text-center">Our Teams:</h2>
+            <div class="col-lg-6 mx-auto">
                 <ul>
                     <li>2x Saturday League Teams (BCL)</li>
                     <li>1x Sunday friendly</li>
@@ -60,47 +69,70 @@
                     <li>1x Indoor team</li>
                     <li>We are also starting a women's team from next year (2024).</li>
                 </ul>
-            </p>
-            <p class="text-center">
-                Sponsorship opportunities are available, please contact us to find out more.
-            </p>
-
-            <h1>Help Us Build A Pavilion</h1>
-            <p class="text-center">
-                Our club is run by the funds raised through memberships and fundraising events. In the last few years, we invested the money raised on Cricket pitch, nets, lawn mover, roller, pitch covers, shed etc.
-            </p>
-            <p class="text-center">
-                Our club doesn't have a pavilion. When it rains or when its too hot etc. then there is nothing to protect members or spectators from the hot sun or rain apart from shed. This also impacts our club reputation and attracting new talent.            
-            </p>
-            <p class="text-center">
-            <strong>Why a Pavilion?</strong><br>
-            <strong>Player Comfort:</strong> A pavilion provides our players with the facilities for changing and spaces to strategize and unwind. It will also improve the reputation of the club and attract new talent.<br>
-            <strong>Spectator Experience:</strong> For our supporters, a pavilion means comfortable seating, a place to savour the thrill of the game, and a hub for socializing.<br>
-            <strong>Community Hub:</strong> Beyond the game, our pavilion will serve as a community hub for any future fund rising events like soft ball tournaments we have been conducting past few years and activities that strengthen the bonds that make our club a family.
-            </p>
-            <p class="text-center">
-            We are reaching out to each one of you, our community, to be part of this journey. Your support is invaluable, and every contribution brings us closer to our goal. Please help us reach our target, and make this project a reality by sharing our
-            fundraising site on <a href="https://www.crowdfunder.co.uk/p/earley-cricket-club-pavilion">crowdfunder</a>
-            </p>
-
-            <h1>Find Us</h1>
-            <p>
-                <strong>Earley Cricket Club</strong><br>
-                Bulmershe/Earley Home Guard<br>
-                Pitts Lane<br>
-                Earley<br>
-                Berkshire<br>
-                RG6 1BT
-            </p>
-            <h2>Connect With Us</h1>
-            <p>
-                <strong>PlayCricket</strong>: <a href="https://earley.play-cricket.com/">Find us on PlayCricket</a><Br>
-                <strong>Facebook</strong>: <a href="https://www.facebook.com/earleycricketclub/">Earley Cricket Club on Facebook</a><br>
-                <strong>Twitter</strong>: <a href="https://twitter.com/earleycricket">@earleycricket on Twitter</a><br>
-                <strong>Linked In</strong>: <a href="https://www.linkedin.com/company/earley-cricket-club/">Earley Cricket Club on LinkedIn</a><br>
-                <strong>Email Us</strong>: <a href="mailto:earleyclubcricket@gmail.com">Contact Us</a>
-            </p>
+            </div>
         </div>
+
+        <div class="px-4 py-2 my-2">
+            <h2 class="display-5 fw-bold text-center">Help Us Build A Pavilion:</h2>
+            <div class="col-lg-6 mx-auto">
+                <p>
+                    Our club is run by the funds raised through memberships and fundraising events. In the last few years, we invested the money raised on Cricket pitch, nets, lawn mover, roller, pitch covers, shed etc.
+                </p>
+                <p>
+                    Our club doesn't have a pavilion. When it rains or when its too hot etc. then there is nothing to protect members or spectators from the hot sun or rain apart from shed. This also impacts our club reputation and attracting new talent.
+                </p>
+                <p>
+                    <strong>Why a Pavilion?</strong><br>
+                    <strong>Player Comfort:</strong> A pavilion provides our players with the facilities for changing and spaces to strategize and unwind. It will also improve the reputation of the club and attract new talent.<br>
+                    <strong>Spectator Experience:</strong> For our supporters, a pavilion means comfortable seating, a place to savour the thrill of the game, and a hub for socializing.<br>
+                    <strong>Community Hub:</strong> Beyond the game, our pavilion will serve as a community hub for any future fund rising events like soft ball tournaments we have been conducting past few years and activities that strengthen the bonds that make our club a family.
+                </p>
+                <p>
+                    We are reaching out to each one of you, our community, to be part of this journey. Your support is invaluable, and every contribution brings us closer to our goal. Please help us reach our target, and make this project a reality by sharing our
+                    fundraising site on <a href="https://www.crowdfunder.co.uk/p/earley-cricket-club-pavilion">crowdfunder</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="px-4 py-2 my-2">
+            <h3 class="display-5 fw-bold text-center">Find Us:</h3>
+            <div class="col-lg-6 mx-auto">
+                <div class="row">
+                    <div class="col-6">
+                        <h4 class="display-5 fw-bold text-center">Online:</h4>
+                        <strong>Facebook</strong>: <a href="https://www.facebook.com/earleycricketclub/">Earley Cricket Club on Facebook</a><br>
+                        <strong>Twitter</strong>: <a href="https://twitter.com/earleycricket">@earleycricket on Twitter</a><br>
+                        <strong>Linked In</strong>: <a href="https://www.linkedin.com/company/earley-cricket-club/">Earley Cricket Club on LinkedIn</a><br>
+                        <strong>Email Us</strong>: <a href="mailto:earleyclubcricket@gmail.com">Contact Us</a>
+                    </div>
+                    <div class="col-6">
+                        <h4 class="display-5 fw-bold text-center">Our Ground:</h4>
+                        <strong>Earley Cricket Club</strong><br>
+                        Bulmershe/Earley Home Guard<br>
+                        Pitts Lane<br>
+                        Earley<br>
+                        Berkshire<br>
+                        RG6 1BT
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+                crossorigin=""></script>
+
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+        <script>
+            var map = L.map('map').setView([51.4525107,-0.9260019], 14);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+            var marker = L.marker([51.4525107,-0.9260019]).addTo(map);
+        </script>
     </body>
 </html>
 
